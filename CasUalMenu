@@ -78,12 +78,6 @@ function OrionLib:IsRunning()
 
 end
 
-UserInputService.InputBegan:Connect(function(input, isProcessed)
-    if not isProcessed and input.KeyCode == Enum.KeyCode.Insert then
-        Orion:SetVisible(not Orion.Visible)
-    end
-end)
-
 local function AddConnection(Signal, Function)
 	if (not OrionLib:IsRunning()) then
 		return
@@ -1768,5 +1762,16 @@ end
 function OrionLib:Destroy()
 	Orion:Destroy()
 end
+
+local function OpenOrion()
+    -- Ваш код для открытия окна Orion
+    print("Открыто окно Orion")
+end
+
+UserInputService.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Insert then
+        OpenOrion()
+    end
+end)
 
 return OrionLib
