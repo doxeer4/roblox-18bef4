@@ -5,7 +5,6 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
       
-
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
@@ -75,9 +74,7 @@ function OrionLib:IsRunning()
 	else
 		return Orion.Parent == game:GetService("CoreGui")
 	end
-
 end
-
 
 local function AddConnection(Signal, Function)
 	if (not OrionLib:IsRunning()) then
