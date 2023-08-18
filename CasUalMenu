@@ -5,6 +5,12 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
+UserInputService.InputBegan:Connect(function(input, isProcessed)
+    if not isProcessed and input.KeyCode == Enum.KeyCode.Insert then
+        Orion:SetVisible(not Orion.Visible)
+    end
+end)
+
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
