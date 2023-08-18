@@ -10,7 +10,6 @@ local openMenuButton = Enum.KeyCode.F -- Пример: кнопка F
 local function onKeyPress(input)
     if input.KeyCode == openMenuButton then
       
-UserInputService.InputBegan:Connect(onKeyPress)
 
 local OrionLib = {
 	Elements = {},
@@ -31,6 +30,8 @@ local OrionLib = {
 	Folder = nil,
 	SaveCfg = false
 }
+
+UserInputService.InputBegan:Connect(onKeyPress)
 
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local Icons = {}
