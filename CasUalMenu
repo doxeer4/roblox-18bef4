@@ -9,10 +9,7 @@ local openMenuButton = Enum.KeyCode.F -- Пример: кнопка F
 
 local function onKeyPress(input)
     if input.KeyCode == openMenuButton then
-        OrionLib:OpenMenu()
-    end
-end
-
+      
 UserInputService.InputBegan:Connect(onKeyPress)
 
 local OrionLib = {
