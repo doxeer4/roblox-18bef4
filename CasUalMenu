@@ -78,6 +78,17 @@ function OrionLib:IsRunning()
 
 end
 
+local function OpenOrion()
+    -- Ваш код для открытия окна Orion
+    print("Открыто окно Orion")
+end
+
+UserInputService.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Insert then
+        OpenOrion()
+    end
+end)
+
 local function AddConnection(Signal, Function)
 	if (not OrionLib:IsRunning()) then
 		return
@@ -1757,21 +1768,6 @@ function OrionLib:MakeWindow(WindowConfig)
 
 	
 	return TabFunction
-end   
-
-function OrionLib:Destroy()
-	Orion:Destroy()
-end
-
-local function OpenOrion()
-    -- Ваш код для открытия окна Orion
-    print("Открыто окно Orion")
-end
-
-UserInputService.InputBegan:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.Insert then
-        OpenOrion()
-    end
-end)
+End
 
 return OrionLib
