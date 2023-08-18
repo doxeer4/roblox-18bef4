@@ -4,11 +4,6 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
-
-local openMenuButton = Enum.KeyCode.F -- Пример: кнопка F
-
-local function onKeyPress(input)
-    if input.KeyCode == openMenuButton then
       
 
 local OrionLib = {
@@ -31,7 +26,6 @@ local OrionLib = {
 	SaveCfg = false
 }
 
-UserInputService.InputBegan:Connect(onKeyPress)
 
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local Icons = {}
