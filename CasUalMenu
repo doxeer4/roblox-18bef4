@@ -5,10 +5,13 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
-local openMenuButton = Enum.KeyCode.F
+local openMenuButton = Enum.KeyCode.F -- Пример: кнопка F
 
 local function onKeyPress(input)
     if input.KeyCode == openMenuButton then
+        OrionLib:OpenMenu()
+    end
+end
 
 UserInputService.InputBegan:Connect(onKeyPress)
 
