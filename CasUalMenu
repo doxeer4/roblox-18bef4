@@ -1757,6 +1757,10 @@ function OrionLib:MakeWindow(WindowConfig)
 
 	
 	return TabFunction
-End
+end   
+
+function OrionLib:Destroy()
+	Orion:Destroy()
+end
 
 return OrionLib
